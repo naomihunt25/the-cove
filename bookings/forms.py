@@ -3,7 +3,6 @@ from datetime import date, time, datetime
 from .models import Booking
 
 
-class BookingForm(forms.ModelForm):
     TIME_CHOICES = [
         (time(12, 0), '12:00 PM'),
         (time(12, 30), '12:30 PM'),
@@ -23,6 +22,8 @@ class BookingForm(forms.ModelForm):
         (time(19, 30), '7:30 PM'),
         (time(20, 0), '8:00 PM'),
     ]
+
+class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
