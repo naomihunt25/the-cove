@@ -12,6 +12,9 @@ def home(request):
 def about(request):
     return render(request, 'bookings/about.html')
 
+def menu(request):
+    return render(request, 'menu.html')
+
 @login_required
 def booking_form(request):
     if request.method == 'POST':
