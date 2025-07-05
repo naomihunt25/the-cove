@@ -185,6 +185,12 @@ form {
   transition: color 0.3s ease-in-out;
 }
 
+/* remove blue underline by social icons */
+#contact .social-favicons a {
+  text-decoration: none;       
+  outline: none;               
+}
+
 /* Copyright section */
 .copyright p {
   color: var(--highlight-color);
