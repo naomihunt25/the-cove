@@ -5,10 +5,13 @@ from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def booking_form(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
             form.save()
             return redirect('booking_success')  
     else:
