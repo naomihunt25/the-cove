@@ -3,6 +3,7 @@ from .forms import BookingForm
 from .models import Booking  
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
 # Create your views here.
 @login_required
