@@ -17,10 +17,10 @@ def about(request):
     return render(request, 'bookings/about.html')
 
 def menu(request):
-    return render(request, 'menu.html')
+    return render(request, 'bookings/menu.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, 'bookings/contact.html')
 
 def signup(request):
     if request.method == 'POST':
