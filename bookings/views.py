@@ -76,3 +76,12 @@ def booking_update(request, pk):
     else:
         form = BookingForm(instance=booking)
     return render(request, 'bookings/booking_form.html', {'form': form, 'update': True})
+
+@login_required
+@require_POST
+def booking_delete(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    if booking.user != request.user and not request.user.is_staff:
+        return HttpResponseForbidden("You are not allowed to delete this booking.")
+    booking.delete()
+    return redirect('booking_list')
