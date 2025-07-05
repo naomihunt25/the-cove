@@ -1,9 +1,10 @@
 from django import forms
-from datetime import date, time
+from datetime import date, time, datetime
 from .models import Booking
 
+
 class BookingForm(forms.ModelForm):
-     TIME_CHOICES = [
+    TIME_CHOICES = [
         (time(12, 0), '12:00 PM'),
         (time(12, 30), '12:30 PM'),
         (time(13, 0), '1:00 PM'),
@@ -22,16 +23,15 @@ class BookingForm(forms.ModelForm):
         (time(19, 30), '7:30 PM'),
         (time(20, 0), '8:00 PM'),
     ]
-     
+
     class Meta:
         model = Booking
         fields = [
-            'first_name', 
-            'last_name', 
-            'email', 
-            'phone_number', 
-            'booking_date', 
-            'booking_time', 
+            'first_name', 'last_name',
+            'email',
+            'phone_number',
+            'booking_date',
+            'booking_time',
             'message',
         ]
 
@@ -55,7 +55,7 @@ class BookingForm(forms.ModelForm):
     def clean_booking_time(self):
         booking_time = self.cleaned_data.get('booking_time')
         if isinstance(booking_time, str):
-            booking_time = datetime.strptime(booking_time, "%H:%M").time()  
+            booking_time = datetime.strptime(booking_time, "%H:%M").time()
         valid_times = [choice[0] for choice in self.TIME_CHOICES]
         if booking_time not in valid_times:
             raise forms.ValidationError("Please select a valid booking time.")
