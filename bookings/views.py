@@ -68,6 +68,7 @@ def booking_update(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     if booking.user != request.user and not request.user.is_staff:
         return HttpResponseForbidden("You are not allowed to edit this booking.")
+    
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
@@ -85,3 +86,10 @@ def booking_delete(request, pk):
         return HttpResponseForbidden("You are not allowed to delete this booking.")
     booking.delete()
     return redirect('booking_list')
+
+@login_required
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('home')
+    return render(request, 'bookings/logout.html')
