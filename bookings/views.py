@@ -9,6 +9,9 @@ from django.http import HttpResponseForbidden
 def home(request):
     return render(request, 'bookings/home.html')
 
+def about(request):
+    return render(request, 'bookings/about.html')
+
 @login_required
 def booking_form(request):
     if request.method == 'POST':
