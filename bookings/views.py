@@ -55,7 +55,7 @@ def booking_list(request):
     if request.user.is_staff:
         bookings = Booking.objects.all().order_by('-booking_date', '-booking_time')
     else:
-         bookings = Booking.objects.all().order_by('-booking_date', '-booking_time')
+         bookings = Booking.objects.filter(user=request.user).order_by('-booking_date', '-booking_time')
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
 
 
