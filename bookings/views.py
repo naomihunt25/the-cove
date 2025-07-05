@@ -63,3 +63,16 @@ def booking_detail(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     return render(request, 'bookings/booking_detail.html', {'booking': booking})
 
+@login_required
+def booking_update(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    if booking.user != request.user and not request.user.is_staff:
+        return HttpResponseForbidden("You are not allowed to edit this booking.")
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('booking_detail', pk=booking.pk)
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'bookings/booking_form.html', {'form': form, 'update': True})
