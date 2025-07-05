@@ -25,7 +25,7 @@ def booking_form(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            form.save()
+            booking.save()
             return redirect('booking_success')  
     else:
         form = BookingForm()
