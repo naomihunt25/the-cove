@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Bookings</title>
-</head>
-<body>
-     <h1>All Bookings</h1>
+  </head>
+  <body>
+    <h1>All Bookings</h1>
     <ul>
-        {% for booking in bookings %}
-            <li>
-                <a href="{% url 'booking_detail' booking.pk %}">
-                    {{ booking.first_name }} {{ booking.last_name }} - {{ booking.booking_date }} at {{ booking.booking_time }}
-                </a>
-            </li>
-        {% empty %}
-            <li>Sorry, no bookings found.</li>
-        {% endfor %}
+      {% for booking in bookings %}
+      <li>
+        <a href="{% url 'booking_detail' booking.pk %}">
+          {{ booking.first_name }} {{ booking.last_name }} - {{
+          booking.booking_date }} at {{ booking.booking_time }}
+        </a>
+      </li>
+      {% empty %}
+      <li>Sorry, no bookings found.</li>
+      {% endfor %}
     </ul>
-</body>
+    <a href="{% url 'booking_form' %}">Make a new booking</a>
+  </body>
 </html>
