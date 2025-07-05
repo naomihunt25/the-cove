@@ -143,6 +143,13 @@ form {
   box-shadow: 0 0 20px rgba(17, 56, 89, 0.1);
 }
 
+/* alert box */
+.alert-custom {
+  background-color: #113859;
+  color: white;
+  border: none;
+}
+
 /* Contact page */
 #contact p {
   color: var(--primary-color);
