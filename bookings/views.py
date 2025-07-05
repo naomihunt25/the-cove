@@ -4,6 +4,10 @@ from .models import Booking
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth import logout
+
 
 # Create your views here.
 def home(request):
@@ -17,6 +21,17 @@ def menu(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'bookings/signup.html', {'form': form})
 
 @login_required
 def booking_form(request):
