@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import BookingForm
+from .models import Booking  
 
 # Create your views here.
-def booking_create(request):
+def booking_form(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -10,7 +11,8 @@ def booking_create(request):
             return redirect('booking_success')  
     else:
         form = BookingForm()
-   return render(request, 'bookings/booking_form.html', {'form': form})
+    return render(request, 'bookings/booking_form.html', {'form': form})
+
 
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
