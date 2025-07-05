@@ -148,6 +148,14 @@ form {
   box-shadow: 0 0 20px rgba(17, 56, 89, 0.1);
 }
 
+/* remove blue border from delete button */
+form.delete {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
 /* alert box */
 .alert-custom {
   background-color: #113859;
