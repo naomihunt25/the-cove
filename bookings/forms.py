@@ -60,3 +60,9 @@ class BookingForm(forms.ModelForm):
         if booking_time not in valid_times:
             raise forms.ValidationError("Please select a valid booking time.")
         return booking_time
+    
+    def clean_phone_number(self):
+        phone = self.cleaned_data.get('phone_number')
+        if not phone.isdigit():
+            raise forms.ValidationError("Phone number must contain digits only.")
+        return phone

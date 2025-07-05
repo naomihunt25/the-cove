@@ -12,7 +12,7 @@ class Booking(models.Model):
     phone_number = models.CharField(max_length=15)
     booking_date = models.DateField()
     booking_time = models.TimeField()
-    message = models.TextField(blank=True, null=True)
+    message = models.TextField()
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} - {self.booking_date} at {self.booking_time}'
