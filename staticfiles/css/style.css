@@ -187,6 +187,12 @@ form {
   transition: color 0.3s ease-in-out;
 }
 
+/* Removes blue dotted link by favicon */
+#contact .social-favicons a {
+  text-decoration: none;       
+  outline: none;               
+}
+
 /* Copyright section */
 .copyright p {
   color: var(--highlight-color);
