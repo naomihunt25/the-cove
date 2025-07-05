@@ -41,7 +41,7 @@ class BookingForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
             'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control', 'min': date.today().isoformat()}),
-            'booking_time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'}),
+            'booking_time': forms.Select(choices=TIME_CHOICES, attrs={'class': 'form-control'}),
             'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
         }
 
