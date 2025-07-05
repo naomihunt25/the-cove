@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 
 # Create your views here.
+def home(request):
+    return render(request, 'bookings/home.html')
+
 @login_required
 def booking_form(request):
     if request.method == 'POST':
