@@ -189,10 +189,6 @@ form.delete {
   font-family: var(--primary-font);
 }
 
-#contact h2 {
-  color: var(--highlight-color);
-}
-
 #contact i {
   color: var(--highlight-color);
   margin-right: 10px;
