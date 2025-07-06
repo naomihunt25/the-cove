@@ -35,10 +35,7 @@ h2 {
 
 .lead {
   color: var(--primary-color);
-}
-
-.header {
-  padding-top: 60px;
+  padding-top: 1rem;
 }
 
 .section {
