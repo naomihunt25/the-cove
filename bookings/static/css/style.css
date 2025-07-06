@@ -185,6 +185,7 @@ form.delete {
   background-color: var(--secondary-color);
   color: var(--highlight-color);
   padding-top: 1rem;
+  font-family: var(--primary-font);
 }
 
 #contact h2 {
