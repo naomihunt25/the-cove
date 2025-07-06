@@ -23,6 +23,3 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('signup/', views.signup, name='signup'),
 ]
-
-handler404 = 'bookings.views.custom_404'
-handler500 = 'bookings.views.custom_500'

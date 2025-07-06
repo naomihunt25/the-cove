@@ -21,3 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bookings.urls')),
 ]
+
+handler404 = 'bookings.views.custom_404'
+handler500 = 'bookings.views.custom_500'
