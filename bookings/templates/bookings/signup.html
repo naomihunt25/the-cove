@@ -3,11 +3,23 @@
 {% block title %}Sign Up - Cove{% endblock %}
 
 {% block content %}
-<main>
-<div class="col-12 text-center">
-  <h1 class="lead display-6"><strong>Sign up</strong></h1>
+
+<header class="header container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6">
+        <strong>Sign up</strong>
+      </h1>
+      <p class="my-4 lead">
+        Create an account to book a table and manage your reservations at The Cove.
+      </p>
+    </div>
   </div>
+</header>
   
+<section class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
   <form method="POST">
     {% csrf_token %}
     
@@ -71,7 +83,8 @@
     
     <button type="submit" class="btn custom-button-outline">Register</button>
   </form>
+  </div>
+  </div>
 </section>
-</main>
 
 {% endblock %}
