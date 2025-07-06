@@ -3,8 +3,10 @@
 {% block title %}Sign Up - Cove{% endblock %}
 
 {% block content %}
-<section class="container mt-5 mb-5">
+<main>
+<div class="col-12 text-center">
   <h1 class="lead display-6"><strong>Sign up</strong></h1>
+  </div>
   
   <form method="POST">
     {% csrf_token %}
@@ -70,5 +72,6 @@
     <button type="submit" class="btn custom-button-outline">Register</button>
   </form>
 </section>
+</main>
 
 {% endblock %}
