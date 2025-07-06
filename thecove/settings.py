@@ -75,7 +75,13 @@ WSGI_APPLICATION = 'thecove.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(
+        (
+            "postgresql://neondb_owner:npg_0KpNcgDs2ukI@"
+            "ep-old-snow-a2yd6utk.eu-central-1.aws.neon.tech/"
+            "cider_video_going_933787"
+        )
+    )
 }
 
 # Password validation
