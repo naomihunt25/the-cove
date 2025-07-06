@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from bookings import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bookings.urls')),
+    path('trigger-500/', views.trigger_500, name='trigger_500'),
 ]
 
 handler404 = 'bookings.views.custom_404'
