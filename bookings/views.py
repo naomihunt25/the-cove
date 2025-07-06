@@ -102,3 +102,9 @@ def logout_view(request):
         logout(request)
         return redirect('home')
     return render(request, 'bookings/logout.html')
+
+def custom_404(request, exception):
+    return render(request, 'bookings/404.html', status=404)
+
+def custom_500(request):
+    return render(request, 'bookings/500.html', status=500)
