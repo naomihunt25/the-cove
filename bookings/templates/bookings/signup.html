@@ -18,6 +18,7 @@
 </header>
   
 <section class="container mt-5 mb-5">
+  <h2 class="visually-hidden">Signup form</h2>
   <div class="row justify-content-center">
     <div class="col-12 col-md-6">
   <form method="POST">
@@ -28,7 +29,7 @@
       {{ form.username.label_tag }}
       {{ form.username }}
       {% if form.username.help_text %}
-        <div class="help-text">
+        <div id="id_username_helptext" class="help-text">
           {{ form.username.help_text|safe }}
         </div>
       {% endif %}
@@ -58,7 +59,7 @@
       {{ form.password1.label_tag }}
       {{ form.password1 }}
       {% if form.password1.help_text %}
-        <div class="help-text">
+        <div id="id_password1_helptext" class="help-text">
           {{ form.password1.help_text|safe }}
         </div>
       {% endif %}
@@ -72,7 +73,7 @@
       {{ form.password2.label_tag }}
       {{ form.password2 }}
       {% if form.password2.help_text %}
-        <div class="help-text">
+        <div id="id_password2_helptext" class="help-text">
           {{ form.password2.help_text|safe }}
         </div>
       {% endif %}
