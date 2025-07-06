@@ -108,7 +108,3 @@ def custom_404(request, exception):
 
 def custom_500(request):
     return render(request, 'bookings/500.html', status=500)
-
-
-def trigger_500(request):
-    raise Exception("Deliberate test exception for 500 error")
