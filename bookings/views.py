@@ -20,7 +20,16 @@ def menu(request):
     return render(request, 'bookings/menu.html')
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        number = request.POST.get('number')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        return redirect('contact_success')
     return render(request, 'bookings/contact.html')
+
+def contact_success(request):
+    return render(request, 'bookings/contact_success.html')
 
 def signup(request):
     if request.method == 'POST':
