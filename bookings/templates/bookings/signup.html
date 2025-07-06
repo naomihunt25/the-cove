@@ -4,12 +4,12 @@
 
 {% block content %}
 <section class="container mt-5 mb-5">
-  <h1>Sign Up</h1>
+  <h1 class="lead display-6"><strong>Sign up</strong></h1>
   
   <form method="POST">
     {% csrf_token %}
     
-    <!-- Username Field -->
+    <!-- Username -->
     <div class="form-field mb-3">
       {{ form.username.label_tag }}
       {{ form.username }}
@@ -23,7 +23,7 @@
       {% endfor %}
     </div>
     
-    <!-- Email Field -->
+    <!-- Email -->
     {% if form.email %}
       <div class="form-field mb-3">
         {{ form.email.label_tag }}
@@ -39,7 +39,7 @@
       </div>
     {% endif %}
     
-    <!-- Password1 Field -->
+    <!-- Password1 -->
     <div class="form-field mb-3">
       {{ form.password1.label_tag }}
       {{ form.password1 }}
@@ -53,7 +53,7 @@
       {% endfor %}
     </div>
     
-    <!-- Password2 Field -->
+    <!-- Password2 -->
     <div class="form-field mb-3">
       {{ form.password2.label_tag }}
       {{ form.password2 }}
@@ -67,7 +67,6 @@
       {% endfor %}
     </div>
     
-    <!-- Submit Button -->
     <button type="submit" class="btn custom-button-outline">Register</button>
   </form>
 </section>
