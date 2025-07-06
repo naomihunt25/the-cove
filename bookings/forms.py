@@ -1,7 +1,6 @@
 from django import forms
-from datetime import date, time, datetime
+from datetime import date, time, datetime, timedelta
 from .models import Booking
-
 
 TIME_CHOICES = [
     (time(12, 0), '12:00 PM'),
@@ -23,12 +22,14 @@ TIME_CHOICES = [
     (time(20, 0), '8:00 PM'),
 ]
 
+
 class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
         fields = [
-            'first_name', 'last_name',
+            'first_name',
+            'last_name',
             'email',
             'phone_number',
             'booking_date',
@@ -41,9 +42,24 @@ class BookingForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
-            'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control', 'min': date.today().isoformat()}),
-            'booking_time': forms.Select(choices=TIME_CHOICES, attrs={'class': 'form-control'}),
-            'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
+            'booking_date': forms.DateInput(
+                attrs={
+                    'type': 'date',
+                    'class': 'form-control',
+                    'min': date.today().isoformat(),
+                    'max': (date.today() + timedelta(days=30)).isoformat(),
+                }
+            ),
+            'booking_time': forms.Select(
+                choices=TIME_CHOICES,
+                attrs={'class': 'form-control'},
+            ),
+            'message': forms.Textarea(
+                attrs={
+                    'class': 'form-control',
+                    'rows': 6,
+                }
+            ),
         }
 
     def clean_booking_date(self):
@@ -59,9 +75,11 @@ class BookingForm(forms.ModelForm):
         if booking_time not in valid_times:
             raise forms.ValidationError("Please select a valid booking time.")
         return booking_time
-    
+
     def clean_phone_number(self):
         phone = self.cleaned_data.get('phone_number')
         if not phone.isdigit():
-            raise forms.ValidationError("Phone number must contain digits only.")
+            raise forms.ValidationError(
+                "Phone number must contain digits only."
+            )
         return phone
