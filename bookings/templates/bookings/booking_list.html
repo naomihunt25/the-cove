@@ -25,10 +25,10 @@
       </div>
 
       {% if bookings %}
-        <ul class="list-group shadow-sm">
+        <ul class="list-group shadow-sm mb-4">
           {% for booking in bookings %}
             <li class="list-group-item mb-3">
-              <div class="justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div>
                   <h5 class="mb-1">
                     <a href="{% url 'booking_detail' booking.pk %}" class="text-decoration-none">
