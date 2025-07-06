@@ -1,0 +1,20 @@
+{% extends "bookings/base.html" %}
+{% block title %}Page Not Found - Cove{% endblock %}
+
+{% block content %}
+
+<main class="container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>Oops! Page not found.</strong></h1>
+      <p class="my-4 lead">
+        Sorry, we could not find the page you're looking for.
+      </p>
+      <a href="{% url 'home' %}" class="btn custom-button-outline">
+        Return to Home
+      </a>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

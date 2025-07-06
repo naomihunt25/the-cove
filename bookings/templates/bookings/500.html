@@ -1,0 +1,20 @@
+{% extends "bookings/base.html" %}
+{% block title %}Server Error - Cove{% endblock %}
+
+{% block content %}
+
+<main class="container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>Oh no! Something went wrong.</strong></h1>
+      <p class="my-4 lead">
+        We're sorry, but there was a problem with our server. Please try again later.
+      </p>
+      <a href="{% url 'home' %}" class="btn custom-button-outline">
+        Return to Home
+      </a>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
