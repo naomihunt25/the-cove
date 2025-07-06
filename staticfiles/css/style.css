@@ -98,7 +98,7 @@ h2 {
 
 /* Hero Section */
 .hero {
-  background-image: url("../images/the-cove-hero.webp");
+  background-image: url("../images/the_cove_hero.webp");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -138,8 +138,7 @@ h2 {
 }
 
 .map {
-  display: block;
-  margin: 0 auto;
+  position: center;
 }
 
 /* Bookings page */
@@ -191,7 +190,7 @@ form.delete {
 }
 
 #contact h2 {
-  color: var(--highlight-color);
+  color: var(--primary-color);
 }
 
 #contact i {
