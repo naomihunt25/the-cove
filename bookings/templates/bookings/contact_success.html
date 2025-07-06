@@ -1,0 +1,23 @@
+{% extends "bookings/base.html" %} 
+{% block title %}Contact Success - Cove{% endblock %} 
+
+{% block content %}
+
+<!-- Success page -->
+
+<main class="container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>Thanks for getting in touch!</strong></h1>
+      <p class="my-4 lead">
+        We have received your message and will get back to you as soon as possible.<br />
+        If your enquiry is urgent, feel free to call us directly.
+      </p>
+      <a href="{% url 'home' %}" class="btn custom-button-outline"
+        >Back to Home page</a
+      >
+    </div>
+  </div>
+</main>
+
+{% endblock %}
