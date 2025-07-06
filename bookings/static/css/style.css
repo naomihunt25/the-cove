@@ -50,6 +50,7 @@ h2 {
   text-decoration: none;
   border-radius: 25px !important;
   background-color: transparent !important;
+  font-family: var(--primary-font) !important;
 }
 
 .btn.custom-button-outline:hover {
