@@ -3,38 +3,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block meta_description %}
     <meta
       name="description"
       content="The Cove at Oceanscape — Cornwall&#39;s premier beach bar offering food, cocktails, and stunning sea views."
-    />
+    >
 
     {% endblock %}
     <title>{% block title %}Cove{% endblock %}</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="{% static 'images/apple_touch_icon.png' %}"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="{% static 'images/favicon_32x32.png' %}"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="{% static 'images/favicon_16x16.png' %}"
-    />
+    >
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -42,7 +42,7 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-    />
+    >
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -50,7 +50,7 @@
 <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'images/cove_logo_main.webp' %}" alt="The Cove logo" class="logo" />
+      <img src="{% static 'images/cove_logo_main.webp' %}" alt="The Cove logo" class="logo">
     </a>
     <button
       class="navbar-toggler"
