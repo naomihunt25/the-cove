@@ -62,6 +62,7 @@ header.header {
   background-color: var(--secondary-color) !important;
   transition: color 0.3s ease-in-out;
   border-color: var(--secondary-color) !important;
+  font-family: var(--primary-font) !important;
 }
 
 /* New bookings button */
