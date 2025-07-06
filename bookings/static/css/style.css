@@ -19,7 +19,7 @@
 /* Global styles */
 body {
   font-family: var(--primary-font);
-  padding-top: 60px;
+  padding-top: 90px !important;
 }
 
 h1,
@@ -35,7 +35,6 @@ h2 {
 
 .lead {
   color: var(--primary-color);
-  padding-top: 1rem;
 }
 
 .section {
@@ -63,6 +62,7 @@ h2 {
 /* New bookings button */
 .center-button {
   text-align: center;
+  justify-content: center;
   padding-bottom: 50px;
 }
 
@@ -151,7 +151,6 @@ form {
   font-family: var(--primary-font);
 }
 
-/* Remove blue border from delete button */
 form.delete {
     border: none !important;
     box-shadow: none !important;
