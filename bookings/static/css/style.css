@@ -47,14 +47,16 @@ header.header {
 }
 
 /* Buttons */
+.btn {
+  font-family: var(--primary-font) !important;
+}
+
 .btn.custom-button-outline {
   border: 3px solid var(--secondary-color) !important;
   padding: 7px 25px !important;
   color: var(--secondary-color) !important;
-  text-decoration: none;
   border-radius: 25px !important;
   background-color: transparent !important;
-  font-family: var(--primary-font) !important;
 }
 
 .btn.custom-button-outline:hover {
@@ -62,7 +64,6 @@ header.header {
   background-color: var(--secondary-color) !important;
   transition: color 0.3s ease-in-out;
   border-color: var(--secondary-color) !important;
-  font-family: var(--primary-font) !important;
 }
 
 /* New bookings button */
