@@ -147,7 +147,7 @@ The wireframes below outline the intended layout for the Cove website.
 
 During the project planning phase, I created Entity Relationship Diagrams to visualise the database structure and model relationships.
 
-![Entity relationship image](documentation\cove-entity-relationship.png)
+![Entity relationship image](documentation/cove-entity-relationship.png)
 
 [Return to Table of Contents](#table-of-contents)
 
