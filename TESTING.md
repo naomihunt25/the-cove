@@ -87,10 +87,10 @@ I used the recommended PEP8 CI Python Linter to ensure that all my Python files 
 
 | File name   | Screenshot                                                                      | Notes                                             |
 | ----------- | ------------------------------------------------------------------------------- | ------------------------------------------------- |
-| asgi.py     | ![asgi.py screenshot](documentation\validation\python\thecove-asgi.png)         | Pass                                              |
-| settings.py | ![settings.py screenshot](documentation\validation\python\thecove-settings.png) | Messsage: AUTH_PASSWORD_VALIDATORS lines too long |
-| urls.py     | ![urls.py screenshot](documentation\validation\python\thecove-urls.png)         | Pass                                              |
-| wsgi.py     | ![wsgi.py screenshot](documentation\validation\python\thecove-wsgi.png)         | Pass                                              |
+| asgi.py     | ![asgi.py screenshot](documentation/validation/python/thecove-asgi.png)         | Pass                                              |
+| settings.py | ![settings.py screenshot](documentation/validation/python/thecove-settings.png) | Messsage: AUTH_PASSWORD_VALIDATORS lines too long |
+| urls.py     | ![urls.py screenshot](documentation/validation/python/thecove-urls.png)         | Pass                                              |
+| wsgi.py     | ![wsgi.py screenshot](documentation/validation/python/thecove-wsgi.png)         | Pass                                              |
 
 ---
 
@@ -98,12 +98,12 @@ I used the recommended PEP8 CI Python Linter to ensure that all my Python files 
 
 | File name | Screenshot                                                                   | Notes |
 | --------- | ---------------------------------------------------------------------------- | ----- |
-| admin.py  | ![admin.py screenshot](documentation\validation\python\bookings-admin.png)   | Pass  |
-| apps.py   | ![apps.py screenshot](documentation\validation\python\bookings-apps.png)     | Pass  |
-| forms.py  | ![forms.py screenshot](documentation\validation\python\bookings-forms.png)   | Pass  |
-| models.py | ![models.py screenshot](documentation\validation\python\bookings-models.png) | Pass  |
-| urls.py   | ![urls.py screenshot](documentation\validation\python\bookings-urls.png)     | Pass  |
-| views.py  | ![views.py screenshot](documentation\validation\python\bookings-views.png)   | Pass  |
+| admin.py  | ![admin.py screenshot](documentation/validation/python/bookings-admin.png)   | Pass  |
+| apps.py   | ![apps.py screenshot](documentation/validation/python/bookings-apps.png)     | Pass  |
+| forms.py  | ![forms.py screenshot](documentation/validation/python/bookings-forms.png)   | Pass  |
+| models.py | ![models.py screenshot](documentation/validation/python/bookings-models.png) | Pass  |
+| urls.py   | ![urls.py screenshot](documentation/validation/python/bookings-urls.png)     | Pass  |
+| views.py  | ![views.py screenshot](documentation/validation/python/bookings-views.png)   | Pass  |
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -113,15 +113,15 @@ I tested my deployed project across multiple browsers to ensure compatibility.
 
 ### Chrome
 
-![Chrome screenshot](documentation\browsers\browser-chrome.png)
+![Chrome screenshot](documentation/browsers/browser-chrome.png)
 
 ### Firefox
 
-![Firefox screenshot](documentation\browsers\browser-firefox.png)
+![Firefox screenshot](documentation/browsers/browser-firefox.png)
 
 ### Edge
 
-![Edge screenshot](documentation\browsers\browser-edge.png)
+![Edge screenshot](documentation/browsers/browser-edge.png)
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -131,11 +131,11 @@ I tested my deployed project on various devices to verify its responsiveness.
 
 ### Mobile - Used Chrome DevTools
 
-![Mobile screenshot](documentation\responsiveness\mobile.png)
+![Mobile screenshot](documentation/responsiveness/mobile.png)
 
 ### Tablet - Used Chrome DevTools
 
-![Tablet screenshot](documentation\responsiveness\tablet.png)
+![Tablet screenshot](documentation/responsiveness/tablet.png)
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -145,7 +145,7 @@ I used the Lighthouse Audit tool to evaluate my deployed project and identify an
 
 ### Home page
 
-![Home page screenshot](documentation\lighthouse\lighthouse-desktop-home.png)
+![Home page screenshot](documentation/lighthouse/lighthouse-desktop-home.png)
 
 ### About page
 
