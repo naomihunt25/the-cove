@@ -151,43 +151,43 @@ I used the Lighthouse Audit tool to evaluate my deployed project and identify an
 
 Scored lower on Best Practices due to using Google Maps to embed.
 
-![About page screenshot](documentation\lighthouse\lighthouse-desktop-about.png)
+![About page screenshot](documentation/lighthouse/lighthouse-desktop-about.png)
 
 ### Menu page
 
-![Menu page screenshot](documentation\lighthouse\lighthouse-desktop-menu.png)
+![Menu page screenshot](documentation/lighthouse/lighthouse-desktop-menu.png)
 
 ### Contact page
 
-![Contact page screenshot](documentation\lighthouse\lighthouse-desktop-contact.png)
+![Contact page screenshot](documentation/lighthouse/lighthouse-desktop-contact.png)
 
 ### Login page
 
-![Login page screenshot](documentation\lighthouse\lighthouse-desktop-login.png)
+![Login page screenshot](documentation/lighthouse/lighthouse-desktop-login.png)
 
 ### Logout page
 
-![Logout page screenshot](documentation\lighthouse\lighthouse-desktop-logout.png)
+![Logout page screenshot](documentation/lighthouse/lighthouse-desktop-logout.png)
 
 ### Sign up page
 
-![Sign up page screenshot](documentation\lighthouse\lighthouse-desktop-signup.png)
+![Sign up page screenshot](documentation/lighthouse/lighthouse-desktop-signup.png)
 
 ### New booking page
 
-![New booking page screenshot](documentation\lighthouse\lighthouse-desktop-bookings-new.png)
+![New booking page screenshot](documentation/lighthouse/lighthouse-desktop-bookings-new.png)
 
 ### My bookings page
 
-![My bookings list page screenshot](documentation\lighthouse\lighthouse-desktop-bookings.png)
+![My bookings list page screenshot](documentation/lighthouse/lighthouse-desktop-bookings.png)
 
 ### 404 page
 
-![404 page screenshot](documentation\lighthouse\lighthouse-404.png)
+![404 page screenshot](documentation/lighthouse/lighthouse-404.png)
 
 ### 500 page
 
-![500 page screenshot](documentation\lighthouse\lighthouse-500.png)
+![500 page screenshot](documentation/lighthouse/lighthouse-500.png)
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -234,13 +234,13 @@ Scored lower on Best Practices due to using Google Maps to embed.
 
 | **User Story** | **Screenshot** |
 |----------------|----------------|
-| As a site user, I want to view the homepage and navigate the site so that I can find important information. | ![Homepage](documentation\features\features-home.png) |
-| As a site user, I want to create an account so that I can make and manage bookings. | ![Sign Up Page](documentation\features\features-signup.png) |
-| As a logged-in user, I want to log into my account so that I can access my bookings. | ![Login Page](documentation\features\features-login.png) |
-| As a logged-in user, I want to make a booking so that I can reserve a table at The Cove. | ![Booking Form](documentation\features\features-bookings-new.png) |
-| As a logged-in user, I want to view, edit, or cancel my bookings so that I can manage my plans. | ![My Bookings](documentation\features\features-bookings.png) |
-| As a logged-in user, I want to log out securely so that my session ends properly. | ![Logout](documentation\features\features-logout.png) |
-| As a Cove administrator, I want to manage all bookings so that customer reservations are organised and conflicts avoided. | ![Admin Dashboard](documentation\features\features-bookings.png) |
+| As a site user, I want to view the homepage and navigate the site so that I can find important information. | ![Homepage](documentation/features/features-home.png) |
+| As a site user, I want to create an account so that I can make and manage bookings. | ![Sign Up Page](documentation/features/features-signup.png) |
+| As a logged-in user, I want to log into my account so that I can access my bookings. | ![Login Page](documentation/features/features-login.png) |
+| As a logged-in user, I want to make a booking so that I can reserve a table at The Cove. | ![Booking Form](documentation/features/features-bookings-new.png) |
+| As a logged-in user, I want to view, edit, or cancel my bookings so that I can manage my plans. | ![My Bookings](documentation/features/features-bookings.png) |
+| As a logged-in user, I want to log out securely so that my session ends properly. | ![Logout](documentation/features/features-logout.png) |
+| As a Cove administrator, I want to manage all bookings so that customer reservations are organised and conflicts avoided. | ![Admin Dashboard](documentation/features/features-bookings.png) |
 
 [Return to Table of Contents](#table-of-contents)
 
