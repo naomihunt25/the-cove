@@ -1,131 +1,337 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Milestone Project 3 - Cove Beach Bar
 
-Welcome USER_NAME,
+![Mockup of website](documentation/cove-mockup.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Table of Contents
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+1. [Project description](#project-description)
+2. [User Experience (UX)](#user-experience-ux)
+3. [Design choices](#design-choices)
+4. [User stories](#user-stories)
+5. [Wireframes](#wireframes)
+6. [Entity Relationship](#entity-relationship)
+7. [Features](#features)
+8. [Tools and technologies](#tools-and-technologies)
+9. [Testing](#testing)
+10. [Deployment](#deployment)
+11. [Credits](#credits)
 
-## Gitpod Reminders
+## Project description
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This project is designed for Unit 3: Back-End Development, where the goal is to build a full-stack web application with server-side functionality. For this project, I have developed the Cove, a beach bar reservation system that allows users to make a reservation. The system features a user-friendly front end connected to a PostgreSQL database via a Django back end, deployed live on Heroku.
 
-`python3 -m http.server`
+The application allows visitors to create, view, update, and delete their bookings, while also providing admin access for managing all reservations. This project is focused on applying the principles of back-end development including database integration and form validation.
 
-A blue button should appear to click: _Make Public_,
+The core focus of this project is to demonstrate the practical use of back-end frameworks, showcasing my ability to build a functional, secure, and maintainable web application with real-world use cases.
 
-Another blue button should appear to click: _Open Browser_.
+[Return to Table of Contents](#table-of-contents)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## User experience (UX)
 
-A blue button should appear to click: _Make Public_,
+The Cove is a beach bar and restaurant that requires a website so visitors and regular customers can view the menu, make table bookings, and manage their reservations easily.
 
-Another blue button should appear to click: _Open Browser_.
+### Owners Goals
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+As a **Cove administrator**, I can **manage all bookings** so that **customer reservations are organized and conflicts avoided.**
 
-To log into the Heroku toolbelt CLI:
+- A page listing all bookings with customer and booking details.
+- Options to add, edit, or cancel any booking.
+- Confirmation prompts before deletion or changes.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+As a **Cove administrator**, I can **can control user access** so that **only authorised staff can manage bookings and data.**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- Secure admin login system.
 
-### Connecting your Mongo database
+### Site user Goals
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+As a **site user**, I can **view the homepage and navigation** so that **I can easily explore the site and find information.**
 
-------
+- A welcoming homepage with key info.
+- Clear navigation bar with links to menu, bookings, contact, and login pages.
+- Responsive layout for mobile and desktop.
 
-## Release History
+As a **site user**, I can **create an account** so that **I can make and manage bookings.**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- A sign up page with a simple signup form.
 
-**June 18, 2024,** Add Mongo back into template
+As a **logged-in user**, I can **log into my account** so that **I can access my bookings.**
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+- A “Login” page for email/username and password input.
 
-**May 28 2024:** Fix Mongo and Links installs
+As a **logged-in user**, I can **make a booking** so that **I can reserve a table at the Cove.**
 
-**April 26 2024:** Update node version to 16
+- A booking form requiring date, time, and message entry for number of guests and requirements.
+- Form validation to prevent empty or invalid submissions.
 
-**September 20 2023:** Update Python version to 3.9.17.
+As a **logged-in user**, I can **view, edit, or cancel my bookings** so that **I can manage my plans.**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- A “My Bookings” page listing current reservations.
+- Buttons to edit or cancel bookings.
+- Confirmation prompts before cancellations or changes.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+As a **logged-in user**, I can **log out securely** so that **my session ends properly.**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- A logout button that ends the session and redirects to the homepage.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### User stories
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+You can view all user stories for this project on the GitHub project board [here.](https://github.com/users/naomihunt25/projects/8)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[Return to Table of Contents](#table-of-contents)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Design choices
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+For The Cove, I aimed to create a clean, coastal-inspired design that reflects the calm, welcoming vibe of a beach bar at sunset. The layout is simple and user-friendly, allowing visitors to focus on key content like menus and booking options. The white background paired with deep blue and burnt orange accents evokes the feeling of ocean waves meeting warm evening skies—subtly reminiscent of a seaside sunset.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Typography choices
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Primary Font:** Poppins
+Poppins was chosen for headings and buttons due to its modern, rounded style that gives a fresh, contemporary feel. Its clean geometry makes the site look polished and professional while still being approachable.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**Secondary Font:** Merriweather
+Merriweather was selected for paragraph text to add a classic touch that contrasts gently with the modern look of Poppins. It improves readability on longer texts like booking instructions and menu descriptions, offering balance and elegance.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Colour palette
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The color scheme captures the beach bar’s identity with a coastal twist: #113859, a deep nautical blue, reflects the ocean and adds a sense of calm and reliability; #f38b10, a rich burnt orange, brings warmth and energy inspired by golden sunset hues over the sea; and #ffffff, a clean white, is used for backgrounds and text contrast to ensure clarity and maintain a fresh, airy aesthetic. Together, these colours balance the coolness of the sea with the warmth of a summer evening, setting the perfect tone for the Cove’s relaxed yet vibrant atmosphere.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Return to Table of Contents](#table-of-contents)
 
-------
+## Wireframes
 
-## FAQ about the uptime script
+The wireframes below outline the intended layout for the Cove website.
 
-**Why have you added this script?**
+### Home page design
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Home page wireframe](documentation/wireframes/home-wireframe.png)
 
-**How will this affect me?**
+### About page design
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![About page wireframe](documentation/wireframes/about-wireframe.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Menu page design
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Menu page wireframe](documentation/wireframes/menu-wireframe.png)
 
-**So….?**
+### Contact page design
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Contact page wireframe](documentation/wireframes/contact-wireframe.png)
 
-**Can I opt out?**
+### Login page design
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Login page wireframe](documentation/wireframes/login-wireframe.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Logout page design
 
-**Anything more?**
+![Logout page wireframe](documentation/wireframes/logout-wireframe.png)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Sign up page design
 
----
+![Sign up page wireframe](documentation/wireframes/signup-wireframe.png)
 
-Happy coding!
+### New booking page design
+
+![New booking page wireframe](documentation/wireframes/bookings-new-wireframe.png)
+
+### Booking success page design
+
+![Booking success page wireframe](documentation/wireframes/booking-success-wireframe.png)
+
+### Error page design
+
+![Error page wireframe](documentation/wireframes/error-wireframe.png)
+
+[Return to Table of Contents](#table-of-contents)
+
+## Entity Relationship
+
+During the project planning phase, I created Entity Relationship Diagrams to visualise the database structure and model relationships.
+
+![Entity relationship image](documentation\cove-entity-relationship.png)
+
+[Return to Table of Contents](#table-of-contents)
+
+## Features
+
+### Home page
+
+The home page acts as the welcoming gateway to the Cove website, designed to immediately convey the relaxed, coastal atmosphere while providing easy navigation to key sections:
+
+- Inviting design: Clean layout with ocean-inspired colors and sunset accents to create a warm, beachside vibe.
+
+- User-friendly navigation: Clear calls to action guide visitors to explore the menu, make bookings, or contact the Cove.
+
+- Responsive layout: Optimised for desktop, tablet, and mobile users to ensure a seamless browsing experience across all devices.
+
+![Home page screenshot](documentation/features/features-home.png)
+
+### About page
+
+The About page shares the story behind the Cove, building a connection with visitors through engaging content and visuals:
+
+- Storytelling focus: Highlights the beach bar’s heritage and atmosphere, creating a sense of place and authenticity.
+
+- Location details: Map and address information for easy navigation.
+
+![About page screenshot](documentation/features/features-about.png)
+
+### Menu page
+
+The Menu page provides a clear and attractive display of food and drink options:
+
+- Organised presentation: Easy-to-read categories and descriptions help visitors browse offerings effortlessly.
+
+![Menu page screenshot](documentation/features/features-menu.png)
+
+### Contact page
+
+The Contact page offers visitors multiple ways to get in touch or find the Cove:
+
+- Contact form: Simple and accessible form for enquiries or feedback.
+
+- Social media links: Connects users to the Cove’s online community.
+
+![Contact page screenshot](documentation/features/features-contact.png)
+
+### User account pages (Login, Logout, Sign Up)
+
+These pages support user account management for bookings and personalised experiences:
+
+- Secure authentication: Clear forms for users to log in or create accounts safely.
+
+- User feedback: Confirmation messages and error handling to guide users smoothly through account processes.
+
+![Login page screenshot](documentation/features/features-login.png)
+![Logout page screenshot](documentation/features/features-logout.png)
+![Sign up page screenshot](documentation/features/features-signup.png)
+
+### Booking system page
+
+The booking feature streamlines table reservations to improve customer experience and management:
+
+- New booking page: User-friendly form to select date, time, and party size.
+  ![New booking page screenshot](documentation/features/features-bookings-new.png)
+
+- Booking success page: Confirmation screen reassuring users their reservation is confirmed.
+  ![Booking success page screenshot](documentation/features/features-bookings-success.png)
+
+- Error handling: Helpful messages for invalid or incomplete booking attempts.
+
+### Error Pages
+
+The error pages handles unexpected situations gracefully to maintain a good user experience even when things go wrong, both error pages are designed to be simple, helpful, and consistent with the Cove’s style:
+
+- 404 Error: Displays a clear message when a user tries to access a page that doesn’t exist, helping them understand the link is broken or the page has been moved. It also provides easy navigation back to the homepage or other main sections.
+  ![404 page screenshot](documentation/features/features-400.png)
+
+- 500 Error: Shows a user-friendly message if there’s a server issue or something went wrong internally, reassuring users that the problem is being addressed and guiding them back to the home page.
+  ![500 page screenshot](documentation/features/features-500.png)
+
+### Future features
+
+- Live table availability system: Integrate a real-time table availability feature so users can instantly see which time slots are free before making a booking.
+
+- Email & SMS booking Cconfirmations: Automatically send confirmation messages and booking reminders via email or text to improve communication and reduce no-shows.
+
+- Dynamic menu management: Enable staff to update food and drink menus through a simple admin panel, allowing for seasonal or daily specials to be displayed in real time.
+
+  [Return to Table of Contents](#table-of-contents)
+
+## Tools and technologies
+
+HTML5 – Used to build the structure and content of the site.
+CSS3 – Applied to style the pages with the coastal theme of The Cove.
+Python – Powers the backend logic of the booking system using Django.
+Django – Used to build and manage the full-stack web application, including user authentication and database handling.
+
+### Python packages and dependencies
+
+- asgiref==3.8.1
+- dj-database-url==0.5.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- psycopg==3.2.9
+- psycopg2==2.9.10 and psycopg2-binary==2.9.10
+- sqlparse==0.5.3
+- typing_extensions==4.14.0
+- tzdata==2025.2
+- urllib3==2.4.0
+- whitenoise==6.8.2
+
+### Tools
+
+Balsamiq – Used to create low-fidelity wireframes for planning the layout and structure of each page in a clear, user-focused way.
+Canva – Designed visual assets such as the logo, custom menu graphics, database diagrams, and other imagery to reflect the beachside vibe of the Cove.
+Favicon.io – Used to generate a custom favicon, adding a personalised and polished touch to the browser tab.
+Google Chrome DevTools – Assisted with inspecting elements, fixing layout issues, and testing responsiveness during development.
+Git & GitHub – Provided version control throughout the development process, and served as the project’s remote code repository.
+Heroku – Used to deploy the Django application and PostgreSQL database, making the project accessible as a live website.
+
+[Return to Table of Contents](#table-of-contents)
+
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all testing-related information.
+
+[Return to Table of Contents](#table-of-contents)
+
+## Deployment
+
+**Heroku deployment**
+
+1. From your GitPod CLI in the project's root directory, execute: pip3 freeze --local > requirements.txt to generate a requirements file with all project dependencies.
+2. Create a new file named Procfile (with capital 'P') in your Gitpod workspace root directory. Open the Procfile and verify it contains web: python3 app.py, then save.
+3. Commit and push both new files to your GitHub repository
+4. Access Heroku, click "Create new app", enter your application name and select your nearest region.
+5. Go to the Deploy section in your Heroku dashboard, choose GitHub as the deployment method, locate your repository and click 'connect'.
+6. Access the Settings tab, click "Reveal Config Vars" and add the following variables:
+
+| Key          | Value       |
+| ------------ | ----------- |
+| DATABASE_URL | postgresql  |
+| SECRET_KEY   | mysecretkey |
+
+_Note: Actual environment variable values have been omitted for security purposes._
+
+**Fork the respository**
+
+1. Log in to [Gitpod](https://gitpod.io/), head over to [naomihunt25/the-cove repository](https://github.com/naomihunt25/the-cove).
+2. Locate the Fork button at the top-right of the page.
+3. Add a description for your fork.
+4. Click Create Fork to finish to create a copy.
+
+**Clone the repository**
+
+1. On the [naomihunt25/the-cove repository](https://github.com/naomihunt25/the-cove), click Code (above list of files).
+2. Click the local tab.
+3. Copy the HTTPS link from the "Clone with HTTPS" section.
+4. Launch Git Bash
+5. Navigate to your desired directory location for the cloned repository.
+6. Enter git clone followed by the copied URL from Step 3.
+7. Hit Enter to create your local copy.
+
+Live link - [Cove](https://the-cove-e90a3e902fab.herokuapp.com/)
+
+[Return to Table of Contents](#table-of-contents)
+
+### Credits
+
+#### Content
+
+I implemented the site's core components like buttons and modals using Bootstrap. When I encountered HTML and CSS concepts I wasn't familiar with during development, I referenced W3Schools to strengthen my understanding and guide implementation.
+
+### Fonts
+
+I selected my primary and secondary fonts through Fontjoy and sourced both typefaces from Google Fonts.
+
+### Media
+
+#### Icons
+
+I created a custom favicon using favicon.io.
+
+#### Images
+
+I sourced the hero image from Canva and also used the platform to create mockups, logos, and database schema diagrams. For wireframing, I utilised Balsamiq software.
+
+[Return to Table of Contents](#table-of-contents)
