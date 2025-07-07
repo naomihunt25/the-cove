@@ -239,10 +239,10 @@ The error pages handles unexpected situations gracefully to maintain a good user
 
 ## Tools and technologies
 
-HTML5 – Used to build the structure and content of the site.
-CSS3 – Applied to style the pages with the coastal theme of The Cove.
-Python – Powers the backend logic of the booking system using Django.
-Django – Used to build and manage the full-stack web application, including user authentication and database handling.
+- HTML5 – Used to build the structure and content of the site.
+- CSS3 – Applied to style the pages with the coastal theme of The Cove.
+- Python – Powers the backend logic of the booking system using Django.
+- Django – Used to build and manage the full-stack web application, including user authentication and database handling.
 
 ### Python packages and dependencies
 
@@ -260,12 +260,12 @@ Django – Used to build and manage the full-stack web application, including us
 
 ### Tools
 
-Balsamiq – Used to create low-fidelity wireframes for planning the layout and structure of each page in a clear, user-focused way.
-Canva – Designed visual assets such as the logo, custom menu graphics, database diagrams, and other imagery to reflect the beachside vibe of the Cove.
-Favicon.io – Used to generate a custom favicon, adding a personalised and polished touch to the browser tab.
-Google Chrome DevTools – Assisted with inspecting elements, fixing layout issues, and testing responsiveness during development.
-Git & GitHub – Provided version control throughout the development process, and served as the project’s remote code repository.
-Heroku – Used to deploy the Django application and PostgreSQL database, making the project accessible as a live website.
+- Balsamiq – Used to create low-fidelity wireframes for planning the layout and structure of each page in a clear, user-focused way.
+- Canva – Designed visual assets such as the logo, custom menu graphics, database diagrams, and other imagery to reflect the beachside vibe of the Cove.
+- Favicon.io – Used to generate a custom favicon, adding a personalised and polished touch to the browser tab.
+- Google Chrome DevTools – Assisted with inspecting elements, fixing layout issues, and testing responsiveness during development.
+- Git & GitHub – Provided version control throughout the development process, and served as the project’s remote code repository.
+- Heroku – Used to deploy the Django application and PostgreSQL database, making the project accessible as a live website.
 
 [Return to Table of Contents](#table-of-contents)
 
