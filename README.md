@@ -6,8 +6,8 @@
 
 1. [Project description](#project-description)
 2. [User Experience (UX)](#user-experience-ux)
-3. [Design choices](#design-choices)
-4. [User stories](#user-stories)
+3. [User stories](#user-stories)
+4. [Design choices](#design-choices)
 5. [Wireframes](#wireframes)
 6. [Entity Relationship](#entity-relationship)
 7. [Features](#features)
