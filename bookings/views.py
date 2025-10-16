@@ -7,6 +7,7 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth import logout
+from django.contrib import messages
 
 
 def home(request):
@@ -27,6 +28,7 @@ def contact(request):
         number = request.POST.get('number')
         email = request.POST.get('email')
         message = request.POST.get('message')
+        messages.success(request, "Thank you, your message has been sent!")
         return redirect('contact_success')
     return render(request, 'bookings/contact.html')
 
@@ -41,6 +43,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, "Your account has been created!")
             return redirect('home')
     else:
         form = UserCreationForm()
@@ -55,6 +58,7 @@ def booking_form(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
+            messages.success(request, "Your booking has been created!")
             return redirect('booking_success')
     else:
         form = BookingForm()
@@ -107,6 +111,7 @@ def booking_update(request, pk):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            messages.success(request, "Booking has been updated!")
             return redirect('booking_detail', pk=booking.pk)
     else:
         form = BookingForm(instance=booking)
@@ -129,6 +134,7 @@ def booking_delete(request, pk):
             "You are not allowed to delete this booking."
         )
     booking.delete()
+    messages.success(request, "Booking deleted!")
     return redirect('booking_list')
 
 
@@ -136,6 +142,7 @@ def booking_delete(request, pk):
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
+        messages.success(request, "You have been logged out!")
         return redirect('home')
     return render(request, 'bookings/logout.html')
 

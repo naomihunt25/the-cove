@@ -82,6 +82,19 @@
   </div>
 </nav>
 
+<!-- Messages -->
+{% if messages %}
+  <div class="container mt-4">
+    <ul class="messages list-unstyled">
+      {% for message in messages %}
+        <li class="alert alert-{{ message.tags }}" role="alert">
+          {{ message }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
     <!-- Main content -->
     {% block content %}{% endblock %}
 
